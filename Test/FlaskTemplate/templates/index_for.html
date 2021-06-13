@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+          border: 1px solid rgb(179, 35, 35);
+          border-collapse: collapse;
+          padding: 4px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loops</title>
+</head>
+<body>
+    <h1> For Loop</h1>
+    <table border="1px" align="center"> 
+        <tr>
+            <th>Subjects</th>
+            <th>Marks</th>
+            <th>Pass / Fail</th>
+        </tr>
+        {% for i in data.keys() %}
+            <tr>
+                <td> {{i}} </td>
+                <td> {{data[i]}} </td>
+                <td align="center">
+                {% if data[i] > 50 %}
+                <span style="color:green">P</span>  
+                {% else %}
+                <span style="color:red">F</span>  
+                {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        
+    </table>
+
+</body>
+</html>
